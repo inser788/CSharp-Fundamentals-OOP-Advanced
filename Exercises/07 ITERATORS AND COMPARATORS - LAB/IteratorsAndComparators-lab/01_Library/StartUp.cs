@@ -1,32 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
-
+﻿
 public class StartUp
 {
     static void Main()
     {
-        Student st1 = new Student("pesho", 24, "ab231");
-        Student st2 = new Student("gosho", 21, "assss231");
-        Student st3 = new Student("stamat", 19, "b3444");
+        Book bookOne = new Book("Animal Farm", 2003, "George Orwell");
+        Book bookTwo = new Book("The Documents in the Case", 2002, "Dorothy Sayers", "Robert Eustace");
+        Book bookThree = new Book("The Documents in the Case", 1930);
 
-        University unifff=new University();
+        Library libraryOne = new Library();
+        Library libraryTwo = new Library(bookOne, bookTwo, bookThree);
 
-        unifff.AddStudent(st1);
-        unifff.AddStudent(st2);
-        unifff.AddStudent(st3);
-
-        var test = new string[] {"gosho", "dani", "ani", "ivan"};
-        
-        PrintData("prefix",test);
-    }
-
-    public static void PrintData(string prefix, params string[] students)
-    {
-        foreach (var student in students)
-        {
-            Console.WriteLine($"{prefix}  ---{student}");
-        }
     }
 }
 
